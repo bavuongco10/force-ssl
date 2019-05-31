@@ -1,11 +1,12 @@
 Package.describe({
   summary: "Require this application to use HTTPS",
-  version: "1.2.1",
+  version: "1.2.2",
   prodOnly: true,
   "name": "bavuongco10:force-ssl"
 });
 
 Package.onUse(function (api) {
+  api.versionsFrom('METEOR@1.6.01');
   api.use('ecmascript');
   api.use('webapp', 'server');
   // make sure we come after livedata, so we load after the sockjs
