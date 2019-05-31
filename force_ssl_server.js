@@ -1,7 +1,10 @@
 var forceSSL = Meteor.settings && Meteor.settings.forceSSL;
 import { isLocalConnection, isSslConnection } from 'meteor/force-ssl-common';
 
-if (forceSSL !== false) {
+if (forceSSL === false) {
+  console.warn('be aware that force-sll is turned off on purpose, to enable force-sll remove forceSLL: false in meteor setting')
+}
+else {
   var url = Npm.require("url");
 
 // Unfortunately we can't use a connect middleware here since
