@@ -6,7 +6,7 @@ Package.describe({
 });
 
 Package.onUse(function (api) {
-  api.versionsFrom('METEOR@1.6.01');
+  api.versionsFrom('METEOR@1.6.0.1');
   api.use('ecmascript');
   api.use('webapp', 'server');
   // make sure we come after livedata, so we load after the sockjs
